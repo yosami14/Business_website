@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- title -->
+{% block title %}Services{% endblock %}
+<!-- active page -->
+{% block active_about %}active{% endblock %}
+
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/about-header.jpg' %}');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+        <h2>Services</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Services</li>
+        </ol>
+      </div>
+    </div>
+<!-- End Breadcrumbs -->
+    <!-- ======= Our Services Section ======= -->
+    <section id="services-list" class="services-list">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Services</h2>
+
+        </div>
+
+        <div class="row gy-5">
+        {% for item in service_data %}
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            {% if item.icon %}
+            <div class="icon flex-shrink-0 px-3"> <img src="{{ item.icon.url }}" alt="service icon"></div>
+            {% endif %}
+            <div>
+              <h4 class="title"><a href="#" class="stretched-link">{{ item.title }}</a></h4>
+              <p class="description"> {{ item.description |safe}}</p>
+            </div>
+          </div>
+        {% endfor %}
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- End Our Services Section -->
+{% endblock %}

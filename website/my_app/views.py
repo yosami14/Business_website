@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About_model,Home_model
+from .models import About_model,Home_model,Service_model
 
 # Create your views here.
 def Home_view(request):
@@ -11,6 +11,11 @@ def About_view(request):
     about_data = About_model.objects.first()
     context = {'content': about_data,}
     return render(request, 'about.html', context)
+
+def Service_view(request):
+    service_data = Service_model.objects.all()
+    context = {'service_data': service_data}
+    return render(request, 'service.html', context)
 
 
 # def Why_choose_us_view(request):

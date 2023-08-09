@@ -41,11 +41,10 @@ class Why_choose_us_model(models.Model):
     def __str__(self):
       return self.title
     
-# Our Service
-
-class Our_service_model(models.Model):
+# Service
+class Service_model(models.Model):
+    icon = models.ImageField(blank=True, null=True, upload_to='icon/services')
     title = models.CharField(max_length=200)
     description = RichTextField(blank=True)
-    sub_description = RichTextField(blank=True)
     def __str__(self):
       return self.title

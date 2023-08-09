@@ -59,7 +59,7 @@
         <ul>
           <li><a href=" {% url 'home_url' %}" class="{% block active_home %}{% endblock %}">Home</a></li>
           <li><a href=" {% url 'about_url' %}" class="{% block active_about %}{% endblock %}">About</a></li>
-          <li><a href="services.html" class="{% block active_service %}{% endblock %}">Services</a></li>
+          <li><a href="{% url 'service_url' %}" class="{% block active_service %}{% endblock %}">Services</a></li>
           <li><a href="portfolio.html" class="{% block active_portfolio %}{% endblock %}">Portfolio</a></li>
           <li><a href="team.html" class="{% block active_team %}{% endblock %}">Team</a></li>
           <li><a href="blog.html" class="{% block active_blog %}{% endblock %}">Blog</a></li>

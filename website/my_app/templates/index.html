@@ -15,7 +15,7 @@
           </blockquote>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#about" class="btn-get-started">Get Started</a>
-            <a href="{{hero_data.button_vid}}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="{{ hero_data.button_vid }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
       </div>
@@ -23,9 +23,16 @@
   </section>
   <!-- End Hero Section -->
   <main id="main">
-    <!-- Why Choose us Section -->
-      {% include 'why_choose_us.html' %}
-    <!-- End Why Choose us Section -->
+    <!-- service Section -->
+    {% include 'service_section.html' %}
+
+  <!-- Why Choose us Section -->
+    {% include 'why_choose_us.html' %}
+  
+    <!-- About us Section -->
+    {% include 'about_section.html' %}
+
+
   </main><!-- End #main --> 
   
 {% endblock %}

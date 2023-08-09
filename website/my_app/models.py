@@ -48,3 +48,5 @@ class Service_model(models.Model):
     description = RichTextField(blank=True)
     def __str__(self):
       return self.title
+    
+    

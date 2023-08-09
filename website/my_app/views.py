@@ -18,7 +18,8 @@ def About_view(request):
 def Service_view(request):
     return render(request, 'service.html')
 
-
+def Team_view(request):
+    return render (request,'team.html')
 
 # def Service_view(request):
 #     service_data = Service_model.objects.all()

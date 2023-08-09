@@ -79,6 +79,7 @@ TEMPLATES = [
                 'my_app.context_processors.why_choose_us_cp',
                 'my_app.context_processors.About_cp',
                 'my_app.context_processors.service_cp',
+                'my_app.context_processors.team_cp',
             ],
         },
     },

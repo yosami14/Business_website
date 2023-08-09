@@ -49,4 +49,12 @@ class Service_model(models.Model):
     def __str__(self):
       return self.title
     
-    
+# Team
+class Team_model(models.Model):
+    image = models.ImageField(blank=True, null=True, upload_to='team/')
+    name = models.CharField(max_length=50)
+    position = models.CharField(max_length=100,blank=True, null=True)
+    twitter = models.CharField(max_length=100,blank=True, null=True)
+    facebook = models.CharField(max_length=100,blank=True, null=True)
+    instagram = models.CharField(max_length=100,blank=True, null=True)
+    linkedin = models.CharField(max_length=100,blank=True, null=True)

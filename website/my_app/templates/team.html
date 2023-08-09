@@ -1,8 +1,10 @@
-{% load static%}
-
-{% block team %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Team{% endblock %}
+{% block active_team %}active{% endblock %}
+{% block content %}
     <!-- ======= Team Section ======= -->
-    
+    {% include 'team_section.html' %}
     <!-- End Team Section -->
 
 {% endblock %}

@@ -58,3 +58,5 @@ class Team_model(models.Model):
     facebook = models.CharField(max_length=100,blank=True, null=True)
     instagram = models.CharField(max_length=100,blank=True, null=True)
     linkedin = models.CharField(max_length=100,blank=True, null=True)
+    def __str__(self):
+      return self.name

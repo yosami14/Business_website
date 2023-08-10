@@ -1,4 +1,4 @@
-from my_app.models import Why_choose_us_model,About_model,Service_model,Team_model
+from my_app.models import Why_choose_us_model,About_model,Service_model,Team_model,Footer_model
 # Why choose us
 def why_choose_us_cp(request):
     why_choose_us_data = Why_choose_us_model.objects.all() 
@@ -18,5 +18,11 @@ def service_cp(request):
 def team_cp(request):
     team_data = Team_model.objects.all()
     return {'team_cp': team_data}
+
+# Footer
+def footer_cp(request):
+    footer_data = Footer_model.objects.all()
+    return {'footer_cp': footer_data}
+
 
 

@@ -5,13 +5,13 @@
 {% block active_home %}active{% endblock %}
 {% block content %}
   <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center" style="background: url('{{ hero_data.image.url }}') top center cover;">
+  <section id="hero" class="hero d-flex align-items-center" style="background: url('{{ hero_data.image.url }}') top center / cover;">
     <div class="container">
       <div class="row">
         <div class="col-xl-4">
           <h2 data-aos="fade-up">{{hero_data.title}}</h2>
           <blockquote data-aos="fade-up" data-aos-delay="100">
-            <p>{{hero_data.description}} </p>
+            <p>{{hero_data.description|safe}} </p>
           </blockquote>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#about" class="btn-get-started">Get Started</a>

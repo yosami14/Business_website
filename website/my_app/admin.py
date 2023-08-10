@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About_model,Why_choose_us_model,About_List_Item,Home_model,Service_model,Team_model
+from .models import About_model,Why_choose_us_model,About_List_Item,Home_model,Service_model,Team_model,Footer_model
 # Register your models here.
 #index Section
 admin.site.register(Home_model)
@@ -16,3 +16,6 @@ admin.site.register(Service_model)
 
 #Team Section
 admin.site.register(Team_model)
+
+#Footer Section
+admin.site.register(Footer_model)

@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 #Hero 
 class Home_model(models.Model):
     title = models.CharField(max_length=200) 
-    description = models.CharField(max_length=200)
+    description = RichTextField()
     button_vid = models.CharField(max_length=200,blank=True) 
     image = models.ImageField(blank=True,null=True,upload_to='hero/')
 
@@ -60,3 +60,14 @@ class Team_model(models.Model):
     linkedin = models.CharField(max_length=100,blank=True, null=True)
     def __str__(self):
       return self.name
+
+# Service
+class Footer_model(models.Model):
+    title = models.CharField(max_length=200)
+    description = RichTextField(blank=True)
+    twitter = models.CharField(max_length=100, blank=True, null=True)
+    facebook = models.CharField(max_length=100, blank=True, null=True)
+    instagram = models.CharField(max_length=100, blank=True, null=True)
+    linkedin = models.CharField(max_length=100, blank=True, null=True)
+    def __str__(self):
+      return self.title

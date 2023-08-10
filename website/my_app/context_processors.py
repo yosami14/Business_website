@@ -21,7 +21,7 @@ def team_cp(request):
 
 # Footer
 def footer_cp(request):
-    footer_data = Footer_model.objects.all()
+    footer_data = Footer_model.objects.first()
     return {'footer_cp': footer_data}
 
 

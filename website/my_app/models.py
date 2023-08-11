@@ -80,3 +80,13 @@ class Contact_model(models.Model):
     message = models.TextField()
     def __str__(self):
       return self.name
+    
+#contact_info
+class Contact_info_model(models.Model):
+    name = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    email = models.EmailField()
+    phone = models.CharField(max_length=50)
+
+    def __str__(self):
+      return self.name

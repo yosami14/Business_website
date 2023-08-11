@@ -1,30 +1,24 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Home_model,Service_model,Contact_model
 
-# Create your views here.
+# Home_view
 def Home_view(request):
     home_data = Home_model.objects.first()
     return render(request, 'index.html', {'hero_data': home_data})
 
-
-# def About_view(request):
-#     about_data = About_model.objects.first()
-#     context = {'content': about_data,}
-#     return render(request, 'about.html', context)
-
+# About_view
 def About_view(request):
     return render(request, 'about.html')
 
+# Service_view
 def Service_view(request):
     return render(request, 'service.html')
 
+# Team_view
 def Team_view(request):
     return render (request,'team.html')
 
-from django.shortcuts import render, HttpResponse
-from .models import Contact_model
-
+# Contact_view
 def Contact_view(request):
     success_message = None
     error_message = None
@@ -45,17 +39,9 @@ def Contact_view(request):
 
     context = {
         'success_message': success_message,
-        'error_message': error_message
+        'error_message': error_message,
+
     }
 
     return render(request, 'contact.html', context)
 
-# def Service_view(request):
-#     service_data = Service_model.objects.all()
-#     context = {'service_data': service_data}
-#     return render(request, 'service.html', context)
-
-
-# def Why_choose_us_view(request):
-#     wcu_data = Why_choose_us.objects.all()
-#     return render(request, 'why_choose_us.html',{'wcu_data': wcu_data})

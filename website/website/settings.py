@@ -81,6 +81,7 @@ TEMPLATES = [
                 'my_app.context_processors.service_cp',
                 'my_app.context_processors.team_cp',
                 'my_app.context_processors.footer_cp',
+                'my_app.context_processors.Contact_info_cp',               
             ],
         },
     },

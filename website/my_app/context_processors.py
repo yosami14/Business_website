@@ -1,4 +1,4 @@
-from my_app.models import Why_choose_us_model,About_model,Service_model,Team_model,Footer_model
+from my_app.models import Why_choose_us_model,About_model,Service_model,Team_model,Footer_model,Contact_info_model
 # Why choose us
 def why_choose_us_cp(request):
     why_choose_us_data = Why_choose_us_model.objects.all() 
@@ -23,6 +23,11 @@ def team_cp(request):
 def footer_cp(request):
     footer_data = Footer_model.objects.first()
     return {'footer_cp': footer_data}
+
+# contact_info
+def Contact_info_cp(request):
+    Contact_info_cp = Contact_info_model.objects.first()
+    return {'Contact_info_cp': Contact_info_cp}
 
 
 

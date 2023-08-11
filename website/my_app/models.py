@@ -71,3 +71,12 @@ class Footer_model(models.Model):
     linkedin = models.CharField(max_length=100, blank=True, null=True)
     def __str__(self):
       return self.title
+    
+# contact
+class Contact_model(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+    def __str__(self):
+      return self.name

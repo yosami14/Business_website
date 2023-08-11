@@ -61,7 +61,7 @@
           <li><a href=" {% url 'about_url' %}" class="{% block active_about %}{% endblock %}">About</a></li>
           <li><a href="{% url 'service_url' %}" class="{% block active_service %}{% endblock %}">Services</a></li>
           <li><a href="{% url 'team_url' %}" class="{% block active_team %}{% endblock %}">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'contact_url' %}" class="{% block active_contact %}{% endblock %}">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -92,7 +92,6 @@
   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %} "></script>
   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %} "></script>
   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %} "></script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
